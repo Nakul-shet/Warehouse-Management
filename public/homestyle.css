@@ -1,0 +1,22 @@
+/* body{
+
+    background-image: url('https://images.unsplash.com/photo-1590496794008-383c8070b257?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1391&q=80');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+} */
+
+.navbar-nav{
+    position: absolute;
+    right: 10px;
+}
+
+.navbar-nav .nav-item{
+    margin: 0px 20px;
+    font-size: 18px;
+}
+
+.container.home-container{
+    margin-top: 15px;
+}

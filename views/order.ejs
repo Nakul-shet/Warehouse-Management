@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks</title>
+
+    <link rel="stylesheet" href="homestyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Montserrat:ital,wght@1,600;1,800&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <%- include("./partials/nav.ejs") -%>
+
+    <div class="container order-container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 proceed-container">
+                <img class="proceed-logo" width="100px" height="100px" src="https://cdn-icons.flaticon.com/png/512/3045/premium/3045670.png?token=exp=1657536204~hmac=16dc42e6f3e3a54cfb47ca902b306396"/>
+                
+                <form class="avail-form" action="/proceed" method="post">
+                    <div class="form-group">
+                        <select class="form-select" name="selected" aria-label="Default select example">
+                            <option selected>Order Product</option>
+                            <!-- <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option> -->
+                            <% categories.forEach((cat) => { %>
+                                <option value="<%= cat %>"><%= cat %></option>
+                            <% }) %>
+                          </select>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <lable>Enter the Quantity</lable>
+                        <input type="number" class="form-control" name="quantity"/>
+                    </div>
+                    <br/>
+                    <button type="submit" class="btn btn-block bg-danger text-white" >Procees Order</button>
+                </form>
+            </div>
+            <div class="col-lg-3">
+            </div>
+            
+            
+        </div>
+    </div>

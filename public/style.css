@@ -1,0 +1,196 @@
+.navbar{
+    background-color: #00001a;
+    position : absolute;
+
+    align-items: center;
+}
+
+label{
+    font-size: 18px;
+}
+
+.container.form-container{
+   margin: 50px 100px;
+   
+}
+
+.container.form-container h1{
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    border : 7px double black;
+    margin: 0px 400px;
+}
+
+.first-row{
+    border-right: dashed 5px black;
+    padding-right: 10px;
+}
+
+
+.btn-add{
+    position: relative;
+    top: 20px;
+    left: 555px;
+}
+
+/*Style for navigation*/
+
+.navbar-nav{
+    position: absolute;
+    right: 10px;
+}
+
+.navbar-nav .nav-item{
+    margin: 0px 20px;
+    font-size: 18px;
+}
+
+.form-container{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 30px;
+    border-radius: 20px;
+    font-family: 'Lato', sans-serif;
+    background-color: #b0e0e6;
+}
+
+/*for Inventory page*/
+
+.inventory-container{
+
+    margin-top: 50px;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.inventory-container h1{
+    text-align:  center;
+    background-color: white;
+    border-radius: 20px;
+    border : 7px double black;
+    margin: 0px 400px;
+}
+
+/*Stock page*/
+
+.stock-container{
+
+    margin-top: 80px;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-brand{
+    display: flex;
+}
+
+.navbar-brand h3{
+    position: relative;
+    top: 19px;
+    left: 5px;
+}
+
+.stock-left , .stock-right{
+    justify-content: center;
+    text-align: center;
+}
+
+.stock-right h1{
+    background-color: white;
+    border-radius: 20px;
+    border : 7px double black;
+    padding: 10px;
+    margin: 0px 150px;
+}
+
+.avail-form{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 50px;
+}
+
+.order-container{
+    margin-top: 80px;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.avail-message{
+    position: relative;
+    top: 40px;
+    text-align: center;
+    background-color: #000033;
+    color : white;
+    border-radius: 30px;
+    padding: 10px 0px;
+    border: 8px double white;
+}
+
+.order-button{
+
+    position: relative;
+    top: 100px;
+}
+
+.order-btn{
+    text-decoration: none;
+}
+
+.proceed-container .proceed-logo{
+    position: relative;
+    top: 30px;
+    left: 250px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: 5px double white;
+}
+
+.container.processing-container{
+
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Lato', sans-serif;
+}
+
+.container.processing-container .card{
+
+    margin: 10px;
+}
+
+.dispatch{
+    text-align: center;
+    border: 7px double black;
+    padding: 10px;
+    margin: 30px 550px;
+    border-radius: 25px;
+    font-family: 'Lato', sans-serif;
+}
+
+/*Home Page*/
+
+.dashboard-card{
+    text-align: center;
+    width: 250px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.dashboard-card .btn-dark{
+    margin-top: 20px;
+}
+
+.container.home-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.excel-sheets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

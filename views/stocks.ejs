@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks</title>
+
+    <link rel="stylesheet" href="homestyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Montserrat:ital,wght@1,600;1,800&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <%- include("./partials/nav.ejs") -%>
+
+    <div class="container stock-container">
+        <div class="row">
+            <div class="col-lg-6 stock-left">
+                <img width="400px" height="400px" src="https://cdn-icons-png.flaticon.com/512/3827/3827340.png"/>
+            </div>
+            <div class="col-lg-6 stock-right">
+                <h1>Stocks</h1>
+                <br/>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Price per Unit</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <% data.forEach((d) => { %>
+                            <tr>
+                                <td><%=d.goods %></td>
+                                <td><%=d.category %></td>
+                                <td><%= d.quantity%></td>
+                                <td><%= d.price%></td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+
+                
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

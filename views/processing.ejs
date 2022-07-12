@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks</title>
+
+    <link rel="stylesheet" href="homestyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Montserrat:ital,wght@1,600;1,800&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <%- include("./partials/nav.ejs") -%>
+
+    <h1 class="dispatch"><img width="60px" height="60px" src="https://cdn-icons-png.flaticon.com/512/82/82018.png" />&nbsp Dispatching</h1>
+
+    <div class="container processing-container">
+
+        <% orders.forEach((ord) => { %>
+            <div class="card text-center border-dark mb-3" style="width: 19rem;">
+                <div class="card-header"><h3><%= ord.name %></h3></div>
+                <div class="card-body">
+                  <h5 class="card-title">Product Info:</h5>
+                  <p class="card-text">Quantity : <%= ord.quantity %></p>
+                  <p class="card-text">Price : ₹<%= ord.price %></p>
+                  <span>
+                    <p class="card-text">Date : <%= ord.date %></p>
+                    <p class="card-text">Time : <%= ord.time %></p>
+                  </span>
+                  <br/>
+                  <form action="/done" method="post">
+                    <button type="submit" class="btn btn-danger">Authenticate</button>
+
+                    <input type="hidden" value=<%= ord.name %> name="name"/>
+                    <input type="hidden" value=<%= ord.quantity%>  name="quantity"/>
+                    <input type="hidden" value=<%= ord.price %> name="price"/>
+                    
+                  </form>
+                </div>
+            </div>
+        <% }) %>
+
+    </div>
+
+    
+    
+</body>
+</html>

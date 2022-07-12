@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="homestyle.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <%- include("./partials/nav.ejs") -%>
+
+    <div class="container home-container">
+
+        <div class="row">
+            <div class="col-lg-4 excel-sheets">
+                <div class="dashboard-card">
+                    &nbsp
+                    <em>
+                        The Sheet holds all the real time data regarding the specifications of the incoming order.
+                    </em>
+                    <button class="btn btn-lg btn-dark"><a class="nav-link" href="/generate">Generate Excel Report</a></button>
+        
+                </div>
+
+                <div class="dashboard-card">
+                    &nbsp
+                    <em>
+                        The Sheet holds all the real time data regarding the specifications of the incoming order.
+                    </em>
+                    <button class="btn btn-lg btn-dark"><a class="nav-link" href="/pending">Remaining Orders</a></button>
+
+                </div>
+
+                <div class="dashboard-card">
+                    &nbsp
+                    <em>
+                        The Sheet holds all the real time data regarding the specifications of the incoming order.
+                    </em>
+                    <button class="btn btn-lg btn-dark"><a class="nav-link" href="/completed">Completed Deliveries</a></button>
+
+                </div>
+               
+            </div>
+
+                
+                
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <!-- <img src="../public/images/warehouse-management-system.jpg" class="wms-bg" alt="wms-image"/> -->
+    
+</body>
+</html>

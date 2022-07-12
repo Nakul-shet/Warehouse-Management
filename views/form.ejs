@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Montserrat:ital,wght@1,600;1,800&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <%- include("./partials/nav.ejs") -%>
+
+    
+    <div class="container form-container ">
+        <h1>Certificate of Origin Form</h1>
+        <br/>
+        <form action="/formdata" method="post">
+            <div class="row">
+                <div class="col-lg-6 first-row">
+                    
+                        <!--First Row-->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="inputEmail4">Name</label>
+                                    <input name="name" type="text" class="form-control border-dark" autocomplete="off" required >
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="inputPassword4">Shipping Service</label>
+                                    <input name="service" type="text" class="form-control border-dark border-dark"  autocomplete="off" required>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <br/>
+                        
+                        <!--Date-->
+                        <div class="form-group">
+                          <label for="inputAddress">Date Of Shipping</label>
+                          <input name="shipping_date" type="date" class="form-control border-dark" id="inputAddress" placeholder="1234 Main St" autocomplete="off" required>
+                        </div>
+                        <br/>
+                        <label for="inputAddress2">Consigned To</label>
+                        <br/>
+                        
+                        <div class="form-group">
+                        <!--Street Address-->
+                        <input type="text" class="form-control border-dark" name="street" id="inputAddress2" placeholder="Street Address" autocomplete="off" required>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input name="city" type="text" class="form-control border-dark" placeholder="City" autocomplete="off" required/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input name="region" type="text" class="form-control border-dark" placeholder="Region" autocomplete="off" required/>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input name="zip" type="text" class="form-control border-dark" placeholder="Zip" autocomplete="off" required/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input name="country" type="text" class="form-control border-dark" placeholder="Country" autocomplete="off" required/>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <br/>
+                      
+                </div>
+    
+                <!-- 2nd Form -->
+                <div class="col-lg-6">
+    
+                    
+                        <!--First Row-->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="inputEmail4">Product Name</label>
+                                    <input name="goods" type="text" class="form-control border-dark" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="inputPassword4">Number of Packages</label>
+                                    <input name="package" type="number" class="form-control border-dark"  autocomplete="off" required>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <br/>
+                        
+                        <!--Date-->
+                        <div class="form-group">
+                          <label for="inputAddress">Category</label>
+                          <input type="text" name="category" class="form-control border-dark" name="category" autocomplete="off" required/>
+                        </div>
+                        <br/>
+                        
+                        <div class="form-group">
+                        <!--Street Address-->
+                        <label>Quantity</label>
+                        <input type="number" name="quantity" class="form-control border-dark" id="inputAddress2"  autocomplete="off" required>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Price</label>
+                                    <input name="price" type="number" class="form-control border-dark"  autocomplete="off" required/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Amount</label>
+                                    <input name="amount" type="number" class="form-control border-dark" autocomplete="off" required/>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <br/>
+    
+                        <br/>
+                      
+    
+                </div>
+            </div>
+          <button type="submit" class="btn btn-lg btn-block bg-dark text-white btn-add">Add to Inventory</button>
+        </form>
+        
+        
+    </div>
+
+    
+    
+</body>
+</html>
